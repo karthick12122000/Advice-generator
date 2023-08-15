@@ -7,7 +7,7 @@ async function getQuote() {
  quote.innerText=data.slip.advice;
  var id= document.querySelector(".title");
  id.innerText="ADVICE #"+data.slip.id;
- console.log(data.slip);
+
 }
 getQuote() ;
 
