@@ -9,7 +9,8 @@ async function getQuote() {
  id.innerText="ADVICE #"+data.slip.id;
 
 }
-getQuote() ;
+
+addEventListener("DOMContentLoaded",getQuote());
 
 // const response = fetch(api_url).then((res)=> res.json()).then((e)=>{
 // console.log(e);

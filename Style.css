@@ -61,7 +61,7 @@ body{
     border-radius: 50%;
     position: absolute;
     bottom: -35px;
-   
+   /* position: relative; */
   }
   .button:active{ 
     width: 62px;
@@ -69,6 +69,48 @@ body{
     box-shadow: 0px 0px 50px var(--NeonGreen);
     transition: 0.02s;
   }
+  .button::after{
+    width: 100px;
+    height: 50px;
+    content: 'Click here for more advice';
+    background-color: #ffffff;
+    position: absolute;
+    left: -110px;
+    font-size: 10px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    font-family: Arial, Helvetica, sans-serif;
+    border-radius: 10px;
+    opacity: 0;
+    animation: notes 3s ;
+   
+  } 
+  .button::before{
+    content: '';
+    width: 15px;
+    height: 15px;
+    background-color: #ffffff;
+    position: absolute;
+    left: -21px;
+    transform: rotate(45deg);
+    opacity: 0;
+    animation: notes 3s ;
+  }
+@keyframes notes {
+  0%{
+    opacity:  1;
+  }
+  99%{
+    opacity: 1;
+  }
+  100%{
+
+opacity: 0;
+  }
+  
+}
+
   .title{
     color: var(--NeonGreen);
     letter-spacing: 5px;
@@ -81,9 +123,7 @@ body{
     margin: 0;
     color: var(--LightCyan);
   }
-/* hr{
-  width: 100%;
-} */
+
 
   @media screen and (max-width:550px){
     .mainDiv{
